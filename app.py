@@ -3,7 +3,7 @@ app=Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
-@app.route('/calculate',methods=['POST'])
+@app.route('/',methods=['POST'])
 def calculate():
     ops=request.form.get('operation')
     num1=request.form.get('firstNumber',type=float)
